@@ -43,4 +43,8 @@ public class PublicController {
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
         return registerService.register(signUpRequest);
     }
+    @PostMapping("reset-password")
+    public ResponseEntity<?> resetPassword(@Valid @RequestBody SignupRequest signUpRequest) {
+        return registerService.register(signUpRequest);
+    }
 }
