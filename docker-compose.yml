@@ -18,11 +18,6 @@ services:
     container_name: PetDB
     ports:
       - 5432:5432
-    environment:
-      - 'POSTGRES_USER=postgres'
-      - 'POSTGRES_HOST_AUTH_METHOD=trust'
-      - 'POSTGRES_PASSWORD=root'
-      - 'POSTGRES_DB=PetDB'
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 30s
