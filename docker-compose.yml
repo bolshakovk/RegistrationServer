@@ -7,9 +7,10 @@ services:
     ports:
         - 8080:8080
     depends_on:
-        - postgres
+      postgres:
+        condition: service_healthy
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgrez:5432/PetDB
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/PetDB
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: root
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
