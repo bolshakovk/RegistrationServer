@@ -9,7 +9,7 @@ services:
     depends_on:
         - postgres
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/PetDB
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgrez:5432/PetDB
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: root
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
